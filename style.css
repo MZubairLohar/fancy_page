@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+.body{
+    margin: 0;
+}   
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+}
+.page-1{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateZ(-1px) scale(2);
+    background-size: cover;
+    z-index: -1;
+}
+
+.image-1::after{
+    background-image: url('https://cdn.wallpapersafari.com/72/65/0BcwmN.png');
+}
+.image-2::after{
+    background-image: url('https://www.tapetus.pl/obrazki/n/230732_zoro.jpg');
+}
+.static{
+    background-color: #353232;
+    color: white;
+    opacity: 0.6;
+}
